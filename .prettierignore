@@ -1,0 +1,13 @@
+node_modules/*
+.yarn/*
+yarn.lock
+*.json
+*.yml
+.prettierignore
+.eslintignore
+.prettierrc
+.pnp.js
+*.html
+*.css
+readme.md
+*.min.js

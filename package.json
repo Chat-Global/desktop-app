@@ -1,0 +1,70 @@
+{
+  "name": "chat-global-desktop",
+  "productName": "Chat Global",
+  "version": "1.0.0",
+  "description": "Official Chat Global Desktop Electron App.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron src/index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "pretty": "npx prettier --write ."
+  },
+  "keywords": [
+    "chat",
+    "global",
+    "chat global",
+    "tnfAngel"
+  ],
+  "author": {
+    "name" : "tnfAngel",
+    "email" : "contact@tnfAngel.ml",
+    "url" : "https://www.tnfAngel.ml/"
+  },
+  "license": "CC0-1.0",
+  "build": {
+    "appId": "com.tnfangel.chatglobal",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "snap"
+      ],
+      "category": "Utility",
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "uninstallDisplayName": "Chat Global App",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": ">=13.3.0",
+    "electron-builder": "^22.11.7",
+    "electron-reload": "^1.5.0",
+    "prettier": "2.4.1"
+  }
+}
