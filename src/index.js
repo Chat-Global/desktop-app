@@ -7,10 +7,10 @@ const iconPath = join(__dirname, (process.platform === 'win32') ? 'assets/icon.i
 
 function createMainWindow() {
 	mainWindow = new BrowserWindow({
-		width: 1200,
-		height: 800,
+		width: 1600,
+		height: 900,
 		frame: true,
-		backgroundColor: '#25262a',
+		backgroundColor: '#23272a',
 		title: 'Chat Global App',
 		icon: iconPath,
 		webPreferences: {
@@ -19,7 +19,7 @@ function createMainWindow() {
 		}
 	});
 
-    //mainWindow.setMenu(null);
+    mainWindow.setMenu(null);
 	mainWindow.loadURL('https://app.chatglobal.ml');
 	console.log('Main window created.');
 
